@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    public GameObject spawnPoint;
+    private Transform PlayerTransform;
 
-    void OnTriggerEnter(Collider col)
+    public Transform spawnPoint;
+    void Start()
     {
-        Debug.Log("Enter");
-        if (col.transform.tag == "Enemy")
-        {
-            Debug.Log("colided with enemy");
-            this.transform.position = spawnPoint.transform.position;
-        }
+        PlayerTransform = GameObject.Find("Sphere").transform;
+    }
+    void OnTriggerEnter()
+    {
+        PlayerTransform.position = spawnPoint.position;
     }
 }
 
