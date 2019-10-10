@@ -62,12 +62,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Menu\Scripts\CameraDesc.cs" />
     <Compile Include="Assets\Menu\Scripts\Exit.cs" />
     <Compile Include="Assets\Menu\Scripts\SceneLoad.cs" />
+    <Compile Include="Assets\Menu\Scripts\SceneLoadThree.cs" />
+    <Compile Include="Assets\Menu\Scripts\SceneLoadTwo.cs" />
     <Compile Include="Assets\Scripts\cameraController.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Respawn.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Scripts\WinText.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>H:/Desktop/investigation_one/investigation_one/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

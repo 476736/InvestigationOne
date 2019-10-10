@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class SceneLoad : MonoBehaviour
+public class SceneLoadTwo : MonoBehaviour
 {
     public void LoadScene()
     {
-        CameraDesc.CameraAngles = 1;
+        CameraDesc.CameraAngles = 2;
         SceneManager.LoadScene("InvestigationOne");
-        
+
     }
 }
