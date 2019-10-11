@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class TFPMovement : MonoBehaviour
 {
     //Basic movement controls
     public int jumpConst = 0;
@@ -19,14 +19,14 @@ public class Movement : MonoBehaviour
     {
         MovementFunc();
         Jumping();
-         
+
     }
 
     private void Jumping()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyUp(KeyCode.Space) && isGrounded)
         {
-            selfRigidbody.AddForce(0,jumpConst, 0, ForceMode.Impulse);
+            selfRigidbody.AddForce(0, jumpConst, 0, ForceMode.Impulse);
             isGrounded = false;
         }
     }
@@ -35,13 +35,13 @@ public class Movement : MonoBehaviour
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         if (Input.GetKey(KeyCode.A))
-            rb.AddForce(Vector3.back * 3);
-        if (Input.GetKey(KeyCode.D))
-            rb.AddForce(Vector3.forward * 3);
-        if (Input.GetKey(KeyCode.W))
             rb.AddForce(Vector3.left * 3);
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.D))
             rb.AddForce(Vector3.right * 3);
+        if (Input.GetKey(KeyCode.W))
+            rb.AddForce(Vector3.forward * 3);
+        if (Input.GetKey(KeyCode.S))
+            rb.AddForce(Vector3.back * 3);
     }
 
     void OnCollisionEnter(Collision collision)
